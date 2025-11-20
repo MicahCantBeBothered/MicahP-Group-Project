@@ -10,17 +10,18 @@
 #include "esp_err.h"
 #include "driver/i2c.h"
 #include "esp_log.h"
+#include "proj_adc.h"
 
-static uint8_t ADS_ADDR = 0x48;
+/*static uint8_t ADS_ADDR = 0x48;
 static uint8_t ADS_Config_Pointer = 0x01;
 static uint8_t ADS_Conversion_Pointer = 0x00;
 static uint8_t ADS_Conf1 = 0x42;  //00000010b
-static uint8_t ADS_Conf2 = 0xE3; //11100000b;
+static uint8_t ADS_Conf2 = 0xE3; //11100000b;*/
 
 static const char *TAG = "ADC";
 static const char *TAG1 = "I2C";
 
-static esp_err_t I2C_INIT(i2c_port_t i2c_num, i2c_config_t i2c_conf)
+/*static esp_err_t I2C_INIT(i2c_port_t i2c_num, i2c_config_t i2c_conf)
 {
     ESP_ERROR_CHECK(i2c_driver_install(i2c_num, i2c_conf.mode));
     ESP_ERROR_CHECK(i2c_param_config(i2c_num, &i2c_conf));
@@ -90,7 +91,7 @@ static esp_err_t i2c_read(i2c_port_t i2c_num, uint8_t i2c_address, uint8_t reg_a
     i2c_cmd_link_delete(cmd);
 
     return ret;
-}
+}*/
 
 /*static void ADC_Conversion (uint8_t adc_out[])
 {
